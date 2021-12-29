@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./app.css";
 
 function App() {
+  let title = "hello world title";
+  let paragraph = "whats up paragraph";
+  let comments = [
+    { id: 1, comment: "hello world 1" },
+    { id: 2, comment: "hello world 2" },
+    { id: 3, comment: "hello world 3" },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-div">
+      <h1>{title.toLowerCase()}</h1>
+      <p>{paragraph}</p>
+      <div className="map-elements">
+        <h3>comments length ({comments.length})</h3>
+        <ul>
+          {comments.map((comment, index) => (
+            <li key={comment.id}>
+              {comment.comment} the index is {index}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
