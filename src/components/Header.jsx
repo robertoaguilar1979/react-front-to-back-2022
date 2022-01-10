@@ -1,5 +1,5 @@
 import header from "./header.css";
-
+import FeedbackItem from "./FeedbackItem";
 function Header({ text, name }) {
   return (
     <header>
