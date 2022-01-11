@@ -1,4 +1,6 @@
 import Card from "./shared/Card";
+import PropTypes from "prop-types";
+
 function FeedbackItem({ rating, text }) {
   return (
     <Card>
@@ -7,5 +9,8 @@ function FeedbackItem({ rating, text }) {
     </Card>
   );
 }
-
+FeedbackItem.propTypes = {
+  rating: PropTypes.number.isRequired,
+  text: PropTypes.string.isRequired,
+};
 export default FeedbackItem;
