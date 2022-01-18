@@ -1,5 +1,7 @@
+import Card from "./shared/Card";
+
 function FeedbackForm() {
-  return <div>feedback form</div>;
+  return <Card></Card>;
 }
 
 export default FeedbackForm;
